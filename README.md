@@ -15,6 +15,7 @@ a cron schedule, to execute it once in an hour.
 
 This is the script actualy using:
 
+```
 #-------------------------------------------------------------------------------------------------
 
 #!/bin/ash
@@ -41,12 +42,12 @@ echo -ne $post | nc -v map.guifibaix.coop 80
 
 
 #-------------------------------------------------------------------------------------------------
-
+```
 
 
 
 The Database is also really simple, only one table is needed, with an "on_update" timestamp change:
-
+```
 #-------------------------------------------------------------------------------------------------
 --
 -- Database: `map_guifibaix`
@@ -80,20 +81,4 @@ ALTER TABLE `nodos`
   ADD PRIMARY KEY (`Id`), ADD KEY `Nodo` (`Nodo`,`MAC`), ADD KEY `Timestamp` (`Actualizado`);
   
 #-------------------------------------------------------------------------------------------------
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
+```
