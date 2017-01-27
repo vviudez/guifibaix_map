@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /classes/
+Disallow: /api/
+Disallow: /img/
+Disallow: /include/
+Disallow: .htaccess
+

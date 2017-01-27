@@ -1,0 +1,12 @@
+<?php
+if(!defined('SALT')) define('SALT','nao8wo3vvn0r893un0qa7rybpcafse7heg80jdrty9ker0fcwu89dnfy7b76rdwc');
+// http://techpad.co.uk/content.php?sid=82
+
+// BBDD
+define('BBDD_SERVER', "localhost");
+define('BBDD_USER', "user");
+define('BBDD_PWD', "password");
+define('BBDD_NAME', "map_guifibaix");
+define('BBDD_CHARSET', "utf8");
+
+

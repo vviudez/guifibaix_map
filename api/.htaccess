@@ -1,0 +1,19 @@
+SetEnv TZ Europe/Madrid
+
+<IfModule mod_security.c>
+  SecRuleEngine Off
+  SecFilterInheritance Off
+  SecFilterEngine Off
+  SecFilterScanPOST Off
+  SecRuleRemoveById 300015 3000016 3000017
+</IfModule>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule rest/(.*)$ rest.php?request=$1 [QSA,NC,L]
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header set Access-Control-Allow-Methods "GET, POST, DELETE, OPTIONS"
