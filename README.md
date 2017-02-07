@@ -21,7 +21,7 @@ This is the script actualy using:
 #!/bin/ash
 
 JSON=`libremap-agent | sed '$d'`
-head="POST http://[YOUR URL]/api/rest/GuifiBaix/getData/ HTTP/1.1\r\nHost: map.guifibaix.coop\r\nConnection: close\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nAccept: application/json, text/javascript, */*; q=0.01\r\nOrigin: null\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: es-ES,es;q=0.8,ca;q=0.6,en;q=0.4"
+head="POST http://[YOUR URL]/api/rest/GuifiBaix/getData/ HTTP/1.1\r\nHost: [YOUR URL]\r\nConnection: close\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nAccept: application/json, text/javascript, */*; q=0.01\r\nOrigin: null\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: es-ES,es;q=0.8,ca;q=0.6,en;q=0.4"
 
 let longJSON=`echo $JSON | wc -m`
 total=`expr $longJSON - 1`
@@ -31,7 +31,7 @@ echo -ne $post | nc -v map.guifibaix.coop 80
 
 
 
-head="POST http://[YOUR URL]/api/rest/GuifiBaix/getLinks/ HTTP/1.1\r\nHost: map.guifibaix.coop\r\nConnection: close\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nAccept: application/json, text/javascript, */*; q=0.01\r\nOrigin: null\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: es-ES,es;q=0.8,ca;q=0.6,en;q=0.4"
+head="POST http://[YOUR URL]/api/rest/GuifiBaix/getLinks/ HTTP/1.1\r\nHost: [YOUR URL]\r\nConnection: close\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nAccept: application/json, text/javascript, */*; q=0.01\r\nOrigin: null\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: es-ES,es;q=0.8,ca;q=0.6,en;q=0.4"
 JSONLinks=`bmx6 -c --jshow status --jshow links --jshow interfaces`
 
 let longJSONLinks=`echo $JSONLinks | wc -m`
